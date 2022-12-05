@@ -5,6 +5,15 @@ cmake_minimum_required(VERSION 3.24.3)
 
 set(CMAKE_CXX_STANDARD 20)
 
+if(MSVC)
+    add_compile_options(
+        $<$<CONFIG:>:/MT> #---------|
+        $<$<CONFIG:Debug>:/MTd> #---|-- Statically link the runtime libraries
+        $<$<CONFIG:Release>:/MT> #--|
+    )
+endif()
+
+
 # Target: Library
 
 add_library(temporal STATIC)
