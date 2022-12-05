@@ -2,6 +2,8 @@
 #include "second-unit.h"
 #include "../chrono-unit.h"
 
+using namespace temporal;
+
 TemporalUnit::TemporalUnit(ChronoUnit unit) : unit(unit) {}
 
 TemporalUnit& TemporalUnit::of(const ChronoUnit unit) {

@@ -7,6 +7,8 @@
 
 using namespace std;
 
+using namespace temporal;
+
 
 class DurationConversionTest : public testing::TestWithParam<tuple<Duration, long (*)(Duration), long>> {};
 

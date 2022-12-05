@@ -1,3 +1,5 @@
+#pragma once
+
 #include "temporal-unit.h"
 
 TEST(TemporalUnit, IsDateBasedTest) {

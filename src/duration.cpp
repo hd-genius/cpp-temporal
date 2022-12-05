@@ -7,6 +7,8 @@
 
 using namespace std;
 
+using namespace temporal;
+
 TemporalQuantity::TemporalQuantity(ChronoUnit unit, long quantity) : unit(unit), quantity(quantity) {}
 
 Duration::Duration(vector<TemporalQuantity*> units) : unitLengths(units) {}

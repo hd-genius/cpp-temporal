@@ -7,39 +7,41 @@
 
 using namespace std;
 
-struct TemporalQuantity {
-    const ChronoUnit unit;
-    const long quantity;
-    TemporalQuantity(ChronoUnit, long);
-};
+namespace temporal {
+    struct TemporalQuantity {
+        const ChronoUnit unit;
+        const long quantity;
+        TemporalQuantity(ChronoUnit, long);
+    };
 
-class Duration {
-private:
-    const vector<TemporalQuantity*> unitLengths;
+    class Duration {
+    private:
+        const vector<TemporalQuantity*> unitLengths;
 
-    Duration(vector<TemporalQuantity*>);
+        Duration(vector<TemporalQuantity*>);
 
-    const vector<ChronoUnit> getUnitTypes() const;
-public:
-    static Duration ofZero();
+        const vector<ChronoUnit> getUnitTypes() const;
+    public:
+        static Duration ofZero();
 
-    static Duration of(ChronoUnit);
+        static Duration of(ChronoUnit);
 
-    static Duration of(ChronoUnit, long);
+        static Duration of(ChronoUnit, long);
 
-    ~Duration();
+        ~Duration();
 
-    Duration operator+(Duration) const;
+        Duration operator+(Duration) const;
 
-    Duration operator-(Duration) const;
+        Duration operator-(Duration) const;
 
-    Duration operator*(long) const;
+        Duration operator*(long) const;
 
-    Duration operator/(long) const;
+        Duration operator/(long) const;
 
-    bool operator==(Duration) const;
+        bool operator==(Duration) const;
 
-    long get(ChronoUnit) const;
+        long get(ChronoUnit) const;
 
-    long to(ChronoUnit) const;
-};
+        long to(ChronoUnit) const;
+    };
+}

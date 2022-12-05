@@ -1,3 +1,7 @@
-class Instant {
-    //
-};
+#pragma once
+
+namespace temporal {
+    class Instant {
+        //
+    };
+}

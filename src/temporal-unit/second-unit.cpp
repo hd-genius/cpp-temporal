@@ -1,5 +1,7 @@
 #include "second-unit.h"
 
+using namespace temporal;
+
 TemporalUnit& SecondUnit::getInstance() {
 	if (instance == nullptr) {
 		instance = new SecondUnit();

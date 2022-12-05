@@ -3,23 +3,25 @@
 #include "temporal-unit.h"
 #include "../duration.h"
 
-class SecondUnit : TemporalUnit {
-private:
-	inline static TemporalUnit* instance = nullptr;
+namespace temporal {
+	class SecondUnit : TemporalUnit {
+	private:
+		inline static TemporalUnit* instance = nullptr;
 
-	SecondUnit();
-public:
-	static TemporalUnit& getInstance();
+		SecondUnit();
+	public:
+		static TemporalUnit& getInstance();
 
-	// long between(Temporal temporal1Inclusive, Temporal temporal2Exclusive) const;
+		// long between(Temporal temporal1Inclusive, Temporal temporal2Exclusive) const;
 
-	Duration getDuration() const;
+		Duration getDuration() const;
 
-	bool isDateBased() const;
+		bool isDateBased() const;
 
-	bool isDurationEstimated()const;
+		bool isDurationEstimated()const;
 
-	// bool isSupportedBy(Temporal temporal) const;
+		// bool isSupportedBy(Temporal temporal) const;
 
-	bool isTimeBased()const;
-};
+		bool isTimeBased()const;
+	};
+}
