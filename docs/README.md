@@ -1,6 +1,8 @@
-# data-structures
+# temporal
 
 # Getting Started
+
+- including as dependency
 
 # Contributing
 
