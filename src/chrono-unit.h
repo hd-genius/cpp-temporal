@@ -1,10 +1,12 @@
 #pragma once
 
+#define CHRONO_UNIT_COUNT 16
+
 namespace temporal {
 	enum ChronoUnit {
 		CENTURIES,
 		DAYS,
-		DECADE,
+		DECADES,
 		ERAS,
 		FOREVER,
 		HALF_DAYS,

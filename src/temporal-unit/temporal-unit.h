@@ -5,24 +5,28 @@
 
 namespace temporal {
 	class TemporalUnit {
-	protected:
+	private:
+		static TemporalUnit* unitCache[CHRONO_UNIT_COUNT];
+
 		const ChronoUnit unit;
 
-		TemporalUnit(ChronoUnit unit);
+		const bool _isDateBased;
+
+		TemporalUnit(ChronoUnit, bool, bool, bool);
 	public:
-		static TemporalUnit& of(const ChronoUnit);
+		static TemporalUnit& of(ChronoUnit);
 
-		// virtual long between(Temporal temporal1Inclusive, Temporal temporal2Exclusive) const = 0;
+		// long between(Temporal temporal1Inclusive, Temporal temporal2Exclusive) const;
 
-		virtual Duration getDuration() const = 0;
+		Duration getDuration() const;
 
-		virtual bool isDateBased() const = 0;
+		bool isDateBased() const;
 
-		virtual bool isDurationEstimated() const = 0;
+		bool isDurationEstimated() const;
 
-		// virtual bool isSupportedBy(Temporal temporal) const = 0;
+		// bool isSupportedBy(Temporal temporal) const;
 
-		virtual bool isTimeBased() const = 0;
+		bool isTimeBased() const;
 
 		bool operator==(TemporalUnit&) const;
 	};
