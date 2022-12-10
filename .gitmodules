@@ -1,6 +1,0 @@
-[submodule "src/dependencies/googletest"]
-	path = src/dependencies/googletest
-	url = https://github.com/google/googletest.git
-[submodule "src/dependencies/doxygen"]
-	path = src/dependencies/doxygen
-	url = https://github.com/doxygen/doxygen.git
