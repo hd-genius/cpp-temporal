@@ -10,9 +10,9 @@ namespace temporal {
 
 		const ChronoUnit unit;
 
-		const bool _isDateBased;
+		const bool _isTimeBased;
 
-		TemporalUnit(ChronoUnit, bool, bool, bool);
+		TemporalUnit(ChronoUnit, bool, bool);
 	public:
 		static TemporalUnit& of(ChronoUnit);
 
